@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20211106 10:17:48.907" rpa="false" schemaversion="2">
+<suite id="s1" name="Legodesk" source="C:\Users\GV614BW\OneDrive - EY\Documents\Robotframework\amazon - variables end\Tests\Legodesk.robot">
+<test id="s1-t1" name="User able to fill all the entries and Register">
+<kw name="Begin Web Test" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211106 10:17:50.825" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20211106 10:17:50.825" endtime="20211106 10:18:00.749"/>
+</kw>
+<status status="PASS" starttime="20211106 10:17:50.825" endtime="20211106 10:18:00.750"/>
+</kw>
+<kw name="Fill all the Details" library="Legodesk">
+<kw name="Load" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${START_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211106 10:18:00.758" level="INFO">Opening url 'https://uat.legodesk.com/register'</msg>
+<status status="PASS" starttime="20211106 10:18:00.757" endtime="20211106 10:18:07.680"/>
+</kw>
+<status status="PASS" starttime="20211106 10:18:00.757" endtime="20211106 10:18:07.681"/>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Legodesk</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211106 10:18:07.824" level="INFO">Page title is 'Legodesk'.</msg>
+<status status="PASS" starttime="20211106 10:18:07.682" endtime="20211106 10:18:07.824"/>
+</kw>
+<status status="PASS" starttime="20211106 10:18:07.682" endtime="20211106 10:18:07.825"/>
+</kw>
+<kw name="Entering all the Details" library="TopNav">
+<kw name="Enter first name" library="TopNav">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=fname</arg>
+<arg>${FIRST_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211106 10:18:07.828" level="INFO">Typing text 'Ganapati' into text field 'name=fname'.</msg>
+<status status="PASS" starttime="20211106 10:18:07.827" endtime="20211106 10:18:08.351"/>
+</kw>
+<status status="PASS" starttime="20211106 10:18:07.826" endtime="20211106 10:18:08.353"/>
+</kw>
+<kw name="Enter last name" library="TopNav">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=lname</arg>
+<arg>${LAST_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211106 10:18:08.354" level="INFO">Typing text 'Bhat' into text field 'name=lname'.</msg>
+<status status="PASS" starttime="20211106 10:18:08.354" endtime="20211106 10:18:09.499"/>
+</kw>
+<status status="PASS" starttime="20211106 10:18:08.353" endtime="20211106 10:18:09.499"/>
+</kw>
+<kw name="Enter email address" library="TopNav">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=email</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211106 10:18:09.506" level="INFO">Typing text 'bhatganapati6@gmail.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20211106 10:18:09.499" endtime="20211106 10:18:10.385"/>
+</kw>
+<status status="PASS" starttime="20211106 10:18:09.499" endtime="20211106 10:18:10.385"/>
+</kw>
+<kw name="Enter password" library="TopNav">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211106 10:18:10.386" level="INFO">Typing text 'Ganesha@1234' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20211106 10:18:10.386" endtime="20211106 10:18:11.235"/>
+</kw>
+<status status="PASS" starttime="20211106 10:18:10.386" endtime="20211106 10:18:11.235"/>
+</kw>
+<kw name="Enter confirm password" library="TopNav">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=Confirmpassword</arg>
+<arg>${CONFIRM_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211106 10:18:11.240" level="INFO">Typing text 'Ganesha@123' into text field 'name=Confirmpassword'.</msg>
+<status status="PASS" starttime="20211106 10:18:11.235" endtime="20211106 10:18:12.030"/>
+</kw>
+<status status="PASS" starttime="20211106 10:18:11.235" endtime="20211106 10:18:12.030"/>
+</kw>
+<status status="PASS" starttime="20211106 10:18:07.825" endtime="20211106 10:18:12.030"/>
+</kw>
+<status status="PASS" starttime="20211106 10:18:00.756" endtime="20211106 10:18:12.031"/>
+</kw>
+<kw name="Registering User" library="Legodesk">
+<kw name="User Registration" library="TopNav">
+<kw name="Register User" library="TopNav">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[text()='Register']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211106 10:18:12.038" level="INFO">Clicking button '//button[text()='Register']'.</msg>
+<status status="PASS" starttime="20211106 10:18:12.037" endtime="20211106 10:18:14.260"/>
+</kw>
+<status status="PASS" starttime="20211106 10:18:12.036" endtime="20211106 10:18:14.260"/>
+</kw>
+<status status="PASS" starttime="20211106 10:18:12.034" endtime="20211106 10:18:14.260"/>
+</kw>
+<status status="PASS" starttime="20211106 10:18:12.033" endtime="20211106 10:18:14.261"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211106 10:18:14.311" endtime="20211106 10:18:17.699"/>
+</kw>
+<status status="PASS" starttime="20211106 10:18:14.309" endtime="20211106 10:18:17.700"/>
+</kw>
+<tag>Current</tag>
+<status status="PASS" starttime="20211106 10:17:50.823" endtime="20211106 10:18:17.701"/>
+</test>
+<test id="s1-t2" name="User able to login to the application">
+<kw name="Begin Web Test" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211106 10:18:17.708" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20211106 10:18:17.707" endtime="20211106 10:18:27.293"/>
+</kw>
+<status status="PASS" starttime="20211106 10:18:17.707" endtime="20211106 10:18:27.293"/>
+</kw>
+<kw name="Login User" library="Legodesk">
+<kw name="Login" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211106 10:18:27.302" level="INFO">Opening url 'https://uat.legodesk.com/login'</msg>
+<status status="PASS" starttime="20211106 10:18:27.302" endtime="20211106 10:18:32.494"/>
+</kw>
+<status status="PASS" starttime="20211106 10:18:27.299" endtime="20211106 10:18:32.495"/>
+</kw>
+<kw name="Enter login Details" library="TopNav">
+<kw name="Enter Username" library="TopNav">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@placeholder='Enter a username or email']</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211106 10:18:32.498" level="INFO">Typing text 'bhatganapati6@gmail.com' into text field '//input[@placeholder='Enter a username or email']'.</msg>
+<status status="PASS" starttime="20211106 10:18:32.497" endtime="20211106 10:18:33.371"/>
+</kw>
+<status status="PASS" starttime="20211106 10:18:32.496" endtime="20211106 10:18:33.372"/>
+</kw>
+<kw name="Enter Userpassword" library="TopNav">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@placeholder='Enter a password']</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211106 10:18:33.375" level="INFO">Typing text 'Ganesha@1234' into text field '//input[@placeholder='Enter a password']'.</msg>
+<status status="PASS" starttime="20211106 10:18:33.373" endtime="20211106 10:18:33.996"/>
+</kw>
+<status status="PASS" starttime="20211106 10:18:33.372" endtime="20211106 10:18:33.996"/>
+</kw>
+<kw name="Click Login" library="TopNav">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211106 10:18:33.998" level="INFO">Clicking button 'Login'.</msg>
+<status status="PASS" starttime="20211106 10:18:33.997" endtime="20211106 10:18:36.056"/>
+</kw>
+<status status="PASS" starttime="20211106 10:18:33.997" endtime="20211106 10:18:36.056"/>
+</kw>
+<status status="PASS" starttime="20211106 10:18:32.495" endtime="20211106 10:18:36.057"/>
+</kw>
+<status status="PASS" starttime="20211106 10:18:27.295" endtime="20211106 10:18:36.057"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211106 10:18:36.099" endtime="20211106 10:18:39.529"/>
+</kw>
+<status status="PASS" starttime="20211106 10:18:36.099" endtime="20211106 10:18:39.529"/>
+</kw>
+<status status="PASS" starttime="20211106 10:18:17.705" endtime="20211106 10:18:39.530"/>
+</test>
+<test id="s1-t3" name="User able to logout from the application">
+<kw name="Begin Web Test" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211106 10:18:39.535" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20211106 10:18:39.535" endtime="20211106 10:18:50.707"/>
+</kw>
+<status status="PASS" starttime="20211106 10:18:39.534" endtime="20211106 10:18:50.707"/>
+</kw>
+<kw name="Login User" library="Legodesk">
+<kw name="Login" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211106 10:18:50.712" level="INFO">Opening url 'https://uat.legodesk.com/login'</msg>
+<status status="PASS" starttime="20211106 10:18:50.712" endtime="20211106 10:18:55.768"/>
+</kw>
+<status status="PASS" starttime="20211106 10:18:50.712" endtime="20211106 10:18:55.769"/>
+</kw>
+<kw name="Enter login Details" library="TopNav">
+<kw name="Enter Username" library="TopNav">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@placeholder='Enter a username or email']</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211106 10:18:55.771" level="INFO">Typing text 'bhatganapati6@gmail.com' into text field '//input[@placeholder='Enter a username or email']'.</msg>
+<status status="PASS" starttime="20211106 10:18:55.770" endtime="20211106 10:18:56.511"/>
+</kw>
+<status status="PASS" starttime="20211106 10:18:55.770" endtime="20211106 10:18:56.511"/>
+</kw>
+<kw name="Enter Userpassword" library="TopNav">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@placeholder='Enter a password']</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211106 10:18:56.511" level="INFO">Typing text 'Ganesha@1234' into text field '//input[@placeholder='Enter a password']'.</msg>
+<status status="PASS" starttime="20211106 10:18:56.511" endtime="20211106 10:18:57.200"/>
+</kw>
+<status status="PASS" starttime="20211106 10:18:56.511" endtime="20211106 10:18:57.201"/>
+</kw>
+<kw name="Click Login" library="TopNav">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211106 10:18:57.202" level="INFO">Clicking button 'Login'.</msg>
+<status status="PASS" starttime="20211106 10:18:57.202" endtime="20211106 10:18:58.497"/>
+</kw>
+<status status="PASS" starttime="20211106 10:18:57.201" endtime="20211106 10:18:58.498"/>
+</kw>
+<status status="PASS" starttime="20211106 10:18:55.769" endtime="20211106 10:18:58.498"/>
+</kw>
+<status status="PASS" starttime="20211106 10:18:50.712" endtime="20211106 10:18:58.499"/>
+</kw>
+<kw name="Logout User" library="Legodesk">
+<kw name="Logout" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Activity</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<msg timestamp="20211106 10:19:03.916" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20211106 10:19:03.975" level="FAIL">Text 'Activity' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20211106 10:18:58.539" endtime="20211106 10:19:03.975"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=logout</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20211106 10:19:03.975" endtime="20211106 10:19:03.975"/>
+</kw>
+<status status="FAIL" starttime="20211106 10:18:58.538" endtime="20211106 10:19:03.982"/>
+</kw>
+<status status="FAIL" starttime="20211106 10:18:58.538" endtime="20211106 10:19:03.983"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211106 10:19:03.986" endtime="20211106 10:19:07.300"/>
+</kw>
+<status status="PASS" starttime="20211106 10:19:03.985" endtime="20211106 10:19:07.301"/>
+</kw>
+<status status="FAIL" starttime="20211106 10:18:39.533" endtime="20211106 10:19:07.302">Text 'Activity' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-t4" name="User able to verify all the dashboard items">
+<kw name="Begin Web Test" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211106 10:19:07.411" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20211106 10:19:07.404" endtime="20211106 10:19:16.200"/>
+</kw>
+<status status="PASS" starttime="20211106 10:19:07.404" endtime="20211106 10:19:16.204"/>
+</kw>
+<kw name="Login User" library="Legodesk">
+<kw name="Login" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211106 10:19:16.215" level="INFO">Opening url 'https://uat.legodesk.com/login'</msg>
+<status status="PASS" starttime="20211106 10:19:16.214" endtime="20211106 10:19:20.548"/>
+</kw>
+<status status="PASS" starttime="20211106 10:19:16.212" endtime="20211106 10:19:20.549"/>
+</kw>
+<kw name="Enter login Details" library="TopNav">
+<kw name="Enter Username" library="TopNav">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@placeholder='Enter a username or email']</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211106 10:19:20.552" level="INFO">Typing text 'bhatganapati6@gmail.com' into text field '//input[@placeholder='Enter a username or email']'.</msg>
+<status status="PASS" starttime="20211106 10:19:20.551" endtime="20211106 10:19:21.579"/>
+</kw>
+<status status="PASS" starttime="20211106 10:19:20.550" endtime="20211106 10:19:21.580"/>
+</kw>
+<kw name="Enter Userpassword" library="TopNav">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@placeholder='Enter a password']</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211106 10:19:21.583" level="INFO">Typing text 'Ganesha@1234' into text field '//input[@placeholder='Enter a password']'.</msg>
+<status status="PASS" starttime="20211106 10:19:21.581" endtime="20211106 10:19:22.421"/>
+</kw>
+<status status="PASS" starttime="20211106 10:19:21.581" endtime="20211106 10:19:22.422"/>
+</kw>
+<kw name="Click Login" library="TopNav">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211106 10:19:22.423" level="INFO">Clicking button 'Login'.</msg>
+<status status="PASS" starttime="20211106 10:19:22.423" endtime="20211106 10:19:23.605"/>
+</kw>
+<status status="PASS" starttime="20211106 10:19:22.422" endtime="20211106 10:19:23.605"/>
+</kw>
+<status status="PASS" starttime="20211106 10:19:20.549" endtime="20211106 10:19:23.605"/>
+</kw>
+<status status="PASS" starttime="20211106 10:19:16.210" endtime="20211106 10:19:23.605"/>
+</kw>
+<kw name="Verify the all dashboard sections" library="Legodesk">
+<kw name="Verify page loaded" library="Dashboard">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//div[text()='Activity']/parent::div/div[2]/div[text()='Last Login']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20211106 10:19:29.061" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20211106 10:19:29.068" level="FAIL">Element '//div[text()='Activity']/parent::div/div[2]/div[text()='Last Login']' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20211106 10:19:23.617" endtime="20211106 10:19:29.068"/>
+</kw>
+<status status="FAIL" starttime="20211106 10:19:23.615" endtime="20211106 10:19:29.071"/>
+</kw>
+<kw name="Verify View Profile" library="Dashboard">
+<status status="NOT RUN" starttime="20211106 10:19:29.074" endtime="20211106 10:19:29.074"/>
+</kw>
+<kw name="Verify User able to view Activity" library="Dashboard">
+<status status="NOT RUN" starttime="20211106 10:19:29.074" endtime="20211106 10:19:29.074"/>
+</kw>
+<kw name="Verify user able to add the contact" library="Dashboard">
+<status status="NOT RUN" starttime="20211106 10:19:29.077" endtime="20211106 10:19:29.077"/>
+</kw>
+<status status="FAIL" starttime="20211106 10:19:23.615" endtime="20211106 10:19:29.078"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211106 10:19:29.091" endtime="20211106 10:19:38.498"/>
+</kw>
+<status status="PASS" starttime="20211106 10:19:29.090" endtime="20211106 10:19:38.499"/>
+</kw>
+<status status="FAIL" starttime="20211106 10:19:07.399" endtime="20211106 10:19:38.521">Element '//div[text()='Activity']/parent::div/div[2]/div[text()='Last Login']' not visible after 5 seconds.</status>
+</test>
+<doc>This is some basic info about the whole suite</doc>
+<status status="FAIL" starttime="20211106 10:17:48.925" endtime="20211106 10:19:38.539"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Current</stat>
+</tag>
+<suite>
+<stat pass="2" fail="2" skip="0" id="s1" name="Legodesk">Legodesk</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20211106 10:17:50.711" level="ERROR">Error in file 'C:\Users\GV614BW\OneDrive - EY\Documents\Robotframework\amazon - variables end\Resources\Legodesk.robot' on line 5: Resource file '..\Resources\PO\Product.robot' does not exist.</msg>
+</errors>
+</robot>

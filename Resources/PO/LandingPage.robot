@@ -6,7 +6,15 @@ Library  SeleniumLibrary
 
 *** Keywords ***
 Load
-    Go To  ${START_URL}
+    Go To    ${START_URL}
 
 Verify Page Loaded
-    Wait Until Page Contains  Hello
+   title should be    Legodesk
+
+
+Login
+   Go To    ${LOGIN_URL}
+
+Logout
+    wait until page contains    Activity
+    click element    id=logout
