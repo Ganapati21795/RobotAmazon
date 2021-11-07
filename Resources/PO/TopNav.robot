@@ -15,6 +15,12 @@ Enter login Details
     Enter Userpassword
     Click Login
 
+Enter Client login Details
+    Enter Client Username
+    Enter Userpassword
+    Click Login
+
+
 User Registration
     Register User
 
@@ -34,6 +40,10 @@ Enter password
 Enter confirm password
     Input Text  name=Confirmpassword    ${CONFIRM_PASSWORD}
 
+
+Enter Client Username
+    Input Text  //input[@placeholder='Enter a username or email']    ${CLIENT_EMAIL}
+
 Enter Username
     Input Text  //input[@placeholder='Enter a username or email']    ${EMAIL}
 
@@ -46,3 +56,6 @@ Register User
 
 Click Login
     Click Button    Login
+
+Select client
+    click element    //label[text()='Client']

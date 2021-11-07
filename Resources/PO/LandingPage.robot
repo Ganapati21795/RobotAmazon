@@ -15,6 +15,10 @@ Verify Page Loaded
 Login
    Go To    ${LOGIN_URL}
 
-Logout
+Logout lawyer
     wait until page contains    Activity
     click element    id=logout
+
+Logout client
+    wait until page contains    Your Cases
+    click element    //ul/li/label[text()='LOGOUT']
