@@ -2,7 +2,8 @@
 Resource  ../Resources/PO/LandingPage.robot
 Resource  ../Resources/PO/TopNav.robot
 Resource  ../Resources/PO/Dashboard.robot
-
+Resource  ../Resources/PO/Cases.robot
+Resource  ../Resources/PO/Calendar.robot
 *** Keywords ***
 Fill all the Details
     LandingPage.Load
@@ -32,7 +33,7 @@ Verify the all dashboard sections
     Dashboard.Verify user able to get the number of invoice due
 
 Verify cases functionality working as expected
-
+    Cases.Verify user able to verify buttons in the cases
 
 Login Client User
     LandingPage.Login
@@ -41,3 +42,12 @@ Login Client User
 
 Logout Client User
     LandingPage.Logout client
+
+Verify calender functionalities working as expected
+    Calendar.Verify user opens the calendar tab
+    Calendar.Verify User able to add the event
+    Calendar.Verify user opens the calendar tab
+    Calendar.Verify User able to close the event
+    Calendar.User verifies can able to click on week and day
+    Calendar.Verify user opens the calendar tab
+    Calendar.User Verifies can able to create a task in the To-Do List
